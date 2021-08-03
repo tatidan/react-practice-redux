@@ -17,6 +17,9 @@ code {
     monospace;
 }
 
+ul{
+  list-style: none;
+}
 input {
   width: 300px;
   height:auto;

@@ -1,4 +1,4 @@
-import { ADD_TASK, DELETE_TASK } from "./actions"
+import { ADD_TASK, DELETE_TASK } from "../tasks/tasksActions"
 
 const initialState = {
     items: [],
