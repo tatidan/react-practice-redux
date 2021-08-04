@@ -1,25 +1,38 @@
-const ADD_USER = "users/addUser";
-const DELETE_USER = "users/deleteUser";
+//=================ToolKit====================
+import { createAction } from "@reduxjs/toolkit";
 
-const addUser = (user) => ({
-  type: ADD_USER,
-  payload: user,
-})
+const addUser = createAction('users/addUser');
+const deleteUser = createAction('users/deleteUser');
+const setFilter = createAction('users/setFilter');
+const setError = createAction('users/setError');
+const resetError = createAction('users/resetError');
 
-const deleteUser = (id) => ({
-    type: DELETE_USER,
-  payload: id,
-})
+export { addUser, deleteUser, setFilter, setError, resetError };
 
-export { ADD_USER, DELETE_USER };
-export { addUser, deleteUser };
 
-const SET_FILTER = "users/setFilter";
+//=================REDUX====================
+// const ADD_USER = "users/addUser";
+// const DELETE_USER = "users/deleteUser";
 
-const setFilter = (value) => ({
-  type: SET_FILTER,
-  payload: value
-});
+// const addUser = (user) => ({
+//   type: ADD_USER,
+//   payload: user,
+// })
 
-export { SET_FILTER };
-export { setFilter };
+// const deleteUser = (id) => ({
+//     type: DELETE_USER,
+//   payload: id,
+// })
+
+// export { ADD_USER, DELETE_USER };
+// export { addUser, deleteUser };
+
+// const SET_FILTER = "users/setFilter";
+
+// const setFilter = (value) => ({
+//   type: SET_FILTER,
+//   payload: value
+// });
+
+// export { SET_FILTER };
+// export { setFilter };
