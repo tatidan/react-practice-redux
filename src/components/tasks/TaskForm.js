@@ -50,6 +50,7 @@ class TaskForm extends Component {
         </select>
 
         <select name="user" onChange={this.onHandleChange}>
+          <option value="no user">your choice</option>
           {this.props.users.map(item => <option
             key={item.id}
             value={item.email}
