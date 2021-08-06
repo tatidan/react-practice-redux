@@ -1,8 +1,8 @@
 const russian = {
   name: "russian",
   navigation: {
-    users: "Юзеры",
-    tasks: "задачи",
+    users: "Пользователи",
+    tasks: "Задачи",
   },
 };
 

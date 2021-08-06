@@ -1,11 +1,16 @@
-import React from 'react'
+import React from "react";
+import TaskForm from "../components/tasks/TaskForm";
+import TaskList from "../components/tasks/TaskList";
+// import { connect } from "react-redux";
 
 const TasksPage = () => {
   return (
-    <div>
-      <h2>tasks page</h2>
-    </div>
-  )
-}
+    <>
+      <TaskForm />
+      <TaskList />
+    </>
+  );
+};
 
-export default TasksPage
+export default TasksPage;
+// export default connect()(TasksPage);

@@ -1,8 +1,8 @@
 const english = {
   name: "english",
   navigation: {
-    users: "users",
-    tasks: "tasks",
+    users: "Users",
+    tasks: "Tasks",
   },
 };
 

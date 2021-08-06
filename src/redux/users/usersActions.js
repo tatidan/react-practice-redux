@@ -1,14 +1,14 @@
 //=================ToolKit====================
 import { createAction } from "@reduxjs/toolkit";
 
-const addUser = createAction('users/addUser');
-const deleteUser = createAction('users/deleteUser');
-const setFilter = createAction('users/setFilter');
-const setError = createAction('users/setError');
-const resetError = createAction('users/resetError');
+const addUser = createAction("users/addUser");
+const deleteUser = createAction("users/deleteUser");
+const setFilter = createAction("users/setFilter");
+const setError = createAction("users/setError");
+const resetError = createAction("users/resetError");
+const setLoader = createAction("users/setLoader");
 
-export { addUser, deleteUser, setFilter, setError, resetError };
-
+export { addUser, deleteUser, setFilter, setError, resetError, setLoader };
 
 //=================REDUX====================
 // const ADD_USER = "users/addUser";

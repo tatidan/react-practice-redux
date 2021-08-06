@@ -2,17 +2,27 @@
 import { createReducer } from "@reduxjs/toolkit";
 import { combineReducers } from "@reduxjs/toolkit";
 
-
-import { addUser, deleteUser, setFilter, setError, resetError } from "./usersActions";
-
+import {
+  addUser,
+  deleteUser,
+  setFilter,
+  setError,
+  resetError,
+  setLoader,
+} from "./usersActions";
 
 const itemsReducer = createReducer([], {
   [addUser]: (state, action) => [...state, action.payload],
-  [deleteUser]: (state, action) => state.filter(item => item.id !== action.payload),
+  [deleteUser]: (state, action) =>
+    state.filter((item) => item.id !== action.payload),
 });
 
 const filterReducer = createReducer("", {
   [setFilter]: (_, action) => action.payload,
+});
+
+const isLoadingReducer = createReducer(false, {
+  [setLoader]: (state) => !state,
 });
 
 const errorReducer = createReducer("", {
@@ -24,10 +34,10 @@ const usersReducer = combineReducers({
   items: itemsReducer,
   filter: filterReducer,
   error: errorReducer,
+  isLoading: isLoadingReducer,
 });
 
 export default usersReducer;
-
 
 //=================REDUX====================
 // import { combineReducers } from "redux";
