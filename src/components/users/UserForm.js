@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 // import { addUser, setError, setLoader } from "../../redux/users/usersActions";
 // import { addUserApi } from "../../services/users/UsersApi";
 import { addUserOperation } from "../../redux/users/usersOperations";
+import { isLoadingSelector } from "../../redux/users/usersSelectors";
 // import { v4 as uuidv4 } from "uuid";
 
 const initialState = {
@@ -54,7 +55,7 @@ class UserForm extends Component {
 }
 const mapStateToProps = (state) => {
   return {
-    isLoading: state.users.isLoading,
+    isLoading: isLoadingSelector(state),
   };
 };
 

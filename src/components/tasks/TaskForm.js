@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { addTask } from "../../redux/tasks/tasksActions";
 import { connect } from "react-redux";
 import { v4 as uuidv4 } from "uuid";
+import { usersSelector } from "../../redux/users/usersSelectors";
 
 const priorityValues = ["high", "medium", "low"];
 
@@ -75,7 +76,7 @@ class TaskForm extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    users: state.users.items,
+    users: usersSelector(state),
   };
 };
 

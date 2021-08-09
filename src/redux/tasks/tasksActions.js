@@ -3,7 +3,11 @@ import { createAction } from "@reduxjs/toolkit";
 //import { v4 as uuidv4 } from "uuid";
 
 const addTask = createAction("tasks/addTask");
+const getTasks = createAction("tasks/getTasks");
 const deleteTask = createAction("tasks/deleteTask");
+const setError = createAction("tasks/setError");
+const resetError = createAction("tasks/resetError");
+const setLoader = createAction("tasks/setLoader");
 
 // для модификации того, что приходит:
 // const addTask = createAction("tasks/addTask", (newTask) => {
@@ -12,8 +16,7 @@ const deleteTask = createAction("tasks/deleteTask");
 //   }
 // })
 
-export { addTask, deleteTask };
-
+export { addTask, getTasks, deleteTask, setError, resetError, setLoader };
 
 //================REDUX=========================
 // const ADD_TASK = "tasks/addTask";
@@ -30,7 +33,7 @@ export { addTask, deleteTask };
 
 // export { addTask, deleteTask };
 // export { ADD_TASK, DELETE_TASK };
-  
+
 //=========================================
 
 // это action-creators:

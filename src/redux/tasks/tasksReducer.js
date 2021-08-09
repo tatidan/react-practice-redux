@@ -1,21 +1,22 @@
 //================TooKit=========================
 import { createReducer } from "@reduxjs/toolkit";
-import { addTask, deleteTask } from "../tasks/tasksActions"
+import { addTask, deleteTask, getTasks } from "../tasks/tasksActions";
 
 const initialState = {
-    items: [],
-    filter: ""  
-}
+  items: [],
+  filter: "",
+};
 
 const tasksReducer = createReducer(initialState, {
   [addTask]: (state, action) => ({
     ...state,
-    items: [...state.items, action.payload]
+    items: [...state.items, action.payload],
   }),
   [deleteTask]: (state, action) => ({
     ...state,
-    items: state.items.filter(item => item.id !== action.payload)
+    items: state.items.filter((item) => item.id !== action.payload),
   }),
+  [getTasks]: (_, { payload }) => payload,
 });
 
 export default tasksReducer;
@@ -26,7 +27,7 @@ export default tasksReducer;
 
 // const initialState = {
 //     items: [],
-//     filter: ""  
+//     filter: ""
 // }
 
 // const tasksReducer = (state = initialState, action) => {
@@ -42,7 +43,7 @@ export default tasksReducer;
 //         ...state,
 //         items: state.items.filter(item => item.id !== action.payload)
 //       }
-    
+
 //     default:
 //    return state
 //   }
