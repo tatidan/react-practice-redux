@@ -12,7 +12,7 @@ export const getUsersApi = async () => {
     }));
     return result;
   } catch (error) {
-    throw new Error(error);
+    throw new Error(error.response.status);
   }
 };
 
